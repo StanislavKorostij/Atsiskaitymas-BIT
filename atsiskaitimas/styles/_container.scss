@@ -35,7 +35,8 @@
 		text-align: center;
 		margin: 0 auto;
 		@include responsive-lg() {
-			margin-top: 50px;
+			margin-top: 30px;
+			margin-bottom: 30px;
 			display: flex;
 			} //responsive end
 
