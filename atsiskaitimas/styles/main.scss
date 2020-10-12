@@ -1,0 +1,12 @@
+* {
+    font-family: "Poppins", sans-serif;
+	box-sizing: border-box;}
+	body {
+		width: 100vw;
+	}
+	html {
+		width: 100vw;
+	}
+@import 'mixins.scss';
+@import '_hero.scss';
+@import '_container.scss';
