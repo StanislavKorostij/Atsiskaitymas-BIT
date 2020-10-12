@@ -1,112 +1,141 @@
 .hero {
-	width: 100vw;
-	background: linear-gradient(180deg, #FFFFFF 48.96%, #E5E5E5 100%);
-	@include responsive-lg() {
-	background-image: url(img/background.jpg);
-	  }
-	
-	&__header {
+  width: 100vw;
+  background: linear-gradient(180deg, #ffffff 48.96%, #e5e5e5 100%);
+  @include responsive-lg() {
+    background-image: url(img/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  } // responsive end
 
-		&__nav {
+  &__logo {
+    margin: 15px;
+    @include responsive-lg() {
+      margin: 0;
+    } // responsive end
+    img {
+      width: 62px;
+      height: 62px;
+      @include responsive-lg() {
+      width: 72px;
+      height: 72px;
+      } // responsive end
+    } //img end
+  } //logo end
+  &__burger {
+    margin: 30px 15px 0px 0px;
 
-			ul {
-				padding: 0px;
-			}
+    img {
+      width: 50px;
+      height: 28px;
+    } // img end
+    @include responsive-lg() {
+      display: none;
+    } // responsive end
+  } // burger end
+  &__header {
+    @include responsive-lg() {
+      margin: 0 auto;
+      width: 70%;
+    } //responsive end
+    &__nav {
+      display: flex;
+      justify-content: space-between;
+      @include responsive-lg() {
+        padding-top: 20px;
+        font-size: 1.1rem;
+      } //responsive end
+      &__ul {
+        display: none;
 
-			&__list {
-				margin: 0px;
-				display: flex;
-				@include responsive-lg() {
-					display: flex;
-					justify-content: space-between;
-					width: 70%;
-					margin: 0 auto;
-					  }
+        button {
+          padding: 15px 50px 15px 50px;
+          color: #ffffff;
+          background: #9b9bca;
+          border-radius: 7px;
+          border-style: none;
+          outline:none;
+        } //button end
+        @include responsive-lg() {
+          display: flex;
+          padding: 0px;
+          justify-content: space-between;
+          width: 70%;
+          list-style: none;
+          color: rgba(113, 119, 132, 1);
+        } //responsive end
+        &__list {
+          &--btn {
+            position: relative;
+            bottom: 15px;
+          } //btn end
+        } //list end
+      } // ul end
+    } //nav end
+  } //header end
 
-				&__item {
-					list-style: none;
-					display: none;
-					@include responsive-lg() {
-						display: flex;
-						margin-top: 30px;
-						  }
+  &__container {
+    margin-bottom: 10px;
+    margin: 0 auto;
+    @include responsive-lg() {
+      width: 70%;
+    } //responsive end
+    &__btn {
+      text-align: center;
+      @include responsive-lg() {
+        text-align: left;
+      } //responsive end
 
-					&--btn {
-						list-style: none;
-						@include responsive-lg() {
-							display: block;
-							button {
-								padding: 15px 30px 15px 30px;
-							}
-							  }
-					}
-					&--logo {
-						list-style: none;
-							  }
+      button {
+        padding: 15px 50px 15px 50px;
+        margin-top: 10px;
+        margin-bottom: 50px;
+        color: #ffffff;
+        background: #9b9bca;
+        border-radius: 7px;
+        border-style: none;
+        outline:none;
+      } //button end
+    } //btn end
 
-						img {
-							margin: 15px;
-							width: 62px;
-							height: 62px;
-						}
-					}
-					&--burger {
-						list-style: none;
-						position: absolute;
-						top: 26px;
-						left: 70%;
-						@include responsive-lg() {
-							display: none;
-							  }
+    &__heading {
+      font-family: Serif;
+      font-size: 2rem;
+      line-height: 100%;
+      text-align: center;
+      color: #696a86;
+      @include responsive-lg() {
+        text-align: left;
+      } //responsive end
 
-						img {
-							width: 50px;
-							height: 28px;
-						}
-					}
-				}
-			}
-
-		}
-	}
-	&__container {
-		margin-bottom: 10px;
-		margin: 0 auto;
-
-		&__heading {
-			font-family: Serif;
-			font-size: 2rem;
-			line-height: 100%;
-			text-align: center;
-			color: #696A86;
-
-			h5 {
-				padding: 0px;
-				margin: 0px;
-			}
-		}
-		&__paragraph {
-			margin: 0px;
-			padding: 0px;
-			margin: 0 auto;
-			font-family: Poppins;
-			font-size: 0.9rem;
-			line-height: 27px;
-			text-align: center;
-			color: #696A86;
-		}
-		&__btn {
-			text-align: center;
-
-			button {
-				padding: 10px 40px 10px 40px;
-				margin-top: 10px;
-				margin-bottom: 50px;
-				color: #FFFFFF;
-				background: #9B9BCA;
-				border-radius: 7px;
-				border-style: none;
-			}
-		}
-	}
-
+      h1 {
+        padding: 0px;
+        margin: 0px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 32px;
+        @include responsive-lg() {
+          font-size: 36px;
+          width: 50%;
+          margin-top: 150px;
+        } //responsive end
+      } //h5 end
+    } //heading end
+    &__paragraph {
+      padding: 0px;
+      margin: 0 auto;
+      p {
+        font-family: Poppins;
+        font-size: 0.9rem;
+        line-height: 27px;
+        text-align: center;
+        color: #696a86;
+        @include responsive-lg() {
+          width: 50%;
+          text-align: left;
+          font-size: 1.2rem;
+        } //responsive end
+      }//p end
+    } //paragraph end
+  } //container end
+} // hero end
